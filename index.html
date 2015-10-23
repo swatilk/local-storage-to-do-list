@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>To-Do List</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="https://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css"/> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!--<script src="https://code.jquery.com/jquery-1.8.2.min.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="row" id="index">
+		<h1 class="text-center">To-Do List</h1>
+		<div class="listDiv col-sm-6">
+			<ul id="toDoItemList" class="list-group"></ul>
+		</div>
+		<form action="#"  class="form-horizontal" method="post" id="listForm">
+            <div class="form-group">
+                <label for="newItem" class="col-sm-4 control-label">Enter to-do Item</label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control"placeholder="eg: Buy Milk" id="newItem"/>
+                </div>
+            </div>
+             <div class="form-group">
+                <div class="subBtn col-sm-offset-4 col-sm-8">    <button type="submit" id="addItem" class="btn btn-primary">Add</button>
+                </div>
+            </div>
+        </form>
+
+        <div class="modal fade" id="editPop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Edit</h4>
+                    </div>
+                    <div class="modal-body">
+                    <textarea autofocus="autofocus" id="editArea"></textarea>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" id="saveEdit">Save changes
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+    <script src="local-storage.js"></script>
+</body>
+</html>
