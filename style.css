@@ -33,6 +33,11 @@
             float: right;
             color: #337ab7;
         }
+        a.edit {
+            float: left;
+            margin-right: 5%;
+        }
+
 
         /*button:hover {
             background-color: #3071A9;
